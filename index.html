@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Goole Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Simple ZtM Survey Form</title>
+</head>
+<body>
+
+<div class="container">
+    <header class="header">
+        <h1 id="title" class="text-center">Zero to Mastery Academy Survey Form</h1>
+        <p id="description" class="description text-center">
+            Thank you for taking the time to help us improve our service!
+        </p>
+    </header>
+    <form id="survey-form">
+        <div class="form-group">
+            <label id="name-label" for="name">Name</label>
+            <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="form-control"
+                    placeholder="Enter your name"
+                    required
+            />
+        </div>
+        <div class="form-group">
+            <label id="email-label" for="email">Email</label>
+            <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="form-control"
+                    placeholder="Enter your email"
+                    required
+            />
+        </div>
+        <div class="form-group">
+            <label id="number-label" for="number">Age<span class="clue">(optional)</span></label>
+            <input
+                    type="number"
+                    name="age"
+                    id="number"
+                    min="0"
+                    max="100"
+                    class="form-control"
+                    placeholder="Age"
+            />
+        </div>
+        <div class="form-group">
+            <p>Which is your current interest?</p>
+            <label for="dropdown"></label><select
+                    id="dropdown"
+                    name="interest"
+                    class="form-control"
+                    required>
+                <option disabled selected value>Select current interest</option>
+                <option value="web">Web Development</option>
+                <option value="programming">Programming</option>
+                <option value="machine">Machine Learning</option>
+                <option value="design">UI/UX Design</option>
+                <option value="game">Game Development</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <p>Would you recommend ZtM to your friend?</p>
+            <label>
+                <input
+                        name="user-recommend"
+                        value="definitely"
+                        type="radio"
+                        class="input-radio"
+                />Definitely
+            </label>
+            <label>
+                <input
+                        name="user-recommend"
+                        value="maybe"
+                        type="radio"
+                        class="input-radio"
+                />Maybe
+            </label>
+            <label>
+                <input
+                        name="user-recommend"
+                        value="not-sure"
+                        type="radio"
+                        class="input-radio"
+                />Not sure
+            </label>
+        </div>
+        <div class="form-group">
+            <p>What is your favorite course from ZtM?</p>
+            <label for="most-like"></label>
+            <select
+                    id="most-like"
+                    name="most-like"
+                    class="form-control"
+                    required>
+                <option disabled selected value>Select an option</option>
+                <option value="challenges">Web Development</option>
+                <option value="projects">JavaScript</option>
+                <option value="node">Node.js</option>
+                <option value="react">React.js</option>
+                <option value="community">Python</option>
+                <option value="machine">Machine Learning</option>
+                <option value="opensource">UI/UX Design</option>
+                <option value="opensource">Game Development</option>
+                <option value="opensource">Databases</option>
+                <option value="community">Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <p>What would you like to see improved about ZtM?<span class="clue">(Check all that apply)</span>
+            </p>
+            <label>
+                <input
+                        name="improve"
+                        value="design"
+                        type="checkbox"
+                        class="input-checkbox"/>Design
+            </label>
+            <label>
+                <input name="improve"
+                       value="logo"
+                       type="checkbox"
+                       class="input-checkbox"/>Logo
+            </label>
+            <label>
+                <input
+                        name="improve"
+                        value="price"
+                        type="checkbox"
+                        class="input-checkbox"/>Price
+            </label>
+            <label>
+                <input
+                        name="improve"
+                        value="website"
+                        type="checkbox"
+                        class="input-checkbox"/>Website
+            </label>
+            <label>
+                <input
+                        name="improve"
+                        value="service"
+                        type="checkbox"
+                        class="input-checkbox"/>Courses
+            </label>
+            <label>
+                <input
+                        name="improve"
+                        value="communication"
+                        type="checkbox"
+                        class="input-checkbox"/>Communication</label>
+        </div>
+        <div class="form-group">
+            <p>Any comments or suggestions?</p>
+            <label for="comments"></label><textarea
+                id="comments"
+                class="input-textarea"
+                name="comment"
+                placeholder="Enter your comment here"></textarea>
+        </div>
+        <div class="form-group">
+            <button
+                    type="submit"
+                    id="submit"
+                    class="submit-button">Submit
+            </button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
